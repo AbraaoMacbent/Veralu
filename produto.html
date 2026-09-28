@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sketchbook — Veralu</title>
+  <meta name="description" content="Sketchbooks Veralu feitos em colab com artistas brasileiros, para dar vida aos dias cinzas.">
+  <meta name="theme-color" content="#FFFCEF">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-34.5 -40.5 180 180'%3E%3Crect x='-34.5' y='-40.5' width='180' height='180' rx='44' fill='%230B1F3A'/%3E%3Cpath fill='%23FFD740' d='M45.77 131.51C-2.44 124.73 -10.26 -31.9 11.56 11.63C14.65 17.8 14.51 22.67 19.06 27.63C35.73 45.79 43.89 22.43 56.56 29.82C80.94 44.04 28.7 93.28 55.52 102.09C83.61 111.31 49.41 37.01 78.09 29.82C86.26 27.78 92.51 26.65 100.56 29.13C104 30.19 105.44 31.32 108.06 33.63C110.68 35.93 114.92 42.1 112.56 47.13C109.3 54.08 95.63 38.99 93.06 44.63C78.21 77.21 99.85 125 64.77 131.51C57.47 132.87 53.12 132.55 45.77 131.51Z'/%3E%3Ccircle cx='41' cy='-2' r='30' fill='%23FFD740'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- chegou por um link do site (ou voltando pelo navegador)? começa coberta pela tinta -->
+  <script>try{var c='js',s=sessionStorage,n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];if(s.getItem('veralu:ink')||(n&&n.type==='back_forward'))c+=' ink-in';s.removeItem('veralu:ink');if(s.getItem('veralu:lite'))c+=' lite';document.documentElement.className=c}catch(e){document.documentElement.className='js'}</script>
+</head>
+<body class="page-product">
+
+<!-- ============ SPRITE (logo, ícones, filtros) ============ -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="lg-V" d="M45.7689 131.513C-2.44313 124.731 -10.2594 -31.8964 11.5573 11.6285C14.6496 17.7977 14.5072 22.6724 19.0573 27.6285C35.7272 45.7859 43.8865 22.4286 56.5573 29.8212C80.9359 44.0445 28.6994 93.2827 55.5156 102.087C83.6071 111.31 49.4129 37.0067 78.0933 29.8212C86.2606 27.775 92.5111 26.6485 100.557 29.1285C104.001 30.1898 105.44 31.323 108.057 33.6285C110.675 35.9341 114.917 42.0971 112.557 47.1285C109.298 54.0797 95.6281 38.9868 93.0573 44.6285C78.2089 77.2145 99.852 124.995 64.7687 131.513C57.4736 132.868 53.1164 132.546 45.7689 131.513Z"/>
+    <path id="lg-e" d="M127.918 129.629C120.852 129.629 114.546 128.135 109 125.149C103.543 122.077 99.2499 117.895 96.1192 112.605C93.0779 107.314 91.5573 101.298 91.5573 94.5565C91.5573 87.9005 93.0332 81.9699 95.985 76.7645C99.0263 71.5592 103.23 67.4632 108.597 64.4765C113.964 61.4045 120.136 59.8685 127.113 59.8685C132.569 59.8685 137.757 60.6899 141.961 62.6525C146.165 64.5299 149.079 66.2535 152.461 69.1525C155.961 72.1525 157.941 74.8005 159.461 79.1525C160.859 83.1525 161.282 85.1272 161.461 89.8205C162.227 109.898 112.891 107.613 112.891 107.613C114.501 109.917 116.558 111.709 119.063 112.989C121.657 114.269 124.787 114.909 128.455 114.909C131.407 114.909 134.493 114.567 137.713 113.885C140.933 113.117 144.019 112.093 146.971 110.813C150.012 109.447 160.815 102.407 162.961 100.445L157.461 123.153C153.526 125.798 146.389 126.727 141.47 127.837C136.639 129.031 132.122 129.629 127.918 129.629ZM111.415 94.3005L145.5 90.5885C148 84.545 144.864 80.3341 141.47 77.7885C139.47 76.2885 133.346 74.3238 129.5 74.3238C126.012 74.3238 119.823 75.8259 117.587 77.7885C115.351 79.6659 113.696 82.0552 112.622 84.9565C111.638 87.7725 111.147 90.6739 111.147 93.6605L111.415 94.3005Z"/>
+    <path id="lg-r" d="M167.061 128.978V62.9111L187.602 74.3238C189.81 70.435 192.593 67.3916 195.95 65.1936C199.396 62.9111 203.548 61.7698 208.407 61.7698C208.937 61.7698 209.423 61.7698 209.865 61.7698C210.306 61.7698 218.58 61.6853 218.933 61.7698C218.933 61.7698 215.557 66.2698 213.557 72.2698C212.31 76.0129 211.057 82.059 211.057 82.059C210.704 81.8899 210.218 81.8054 209.6 81.8054C209.07 81.7209 208.451 81.6786 207.744 81.6786C203.946 81.6786 200.5 82.4394 197.408 83.9611C194.316 85.4828 191.886 87.8499 190.119 91.0623C188.353 94.1903 187.469 98.2904 187.469 103.363V128.978H167.061Z"/>
+    <path id="lg-a" d="M237.877 129.117C233.611 129.117 229.6 128.263 225.845 126.556C222.176 124.764 219.189 122.247 216.885 119.005C214.667 115.676 213.557 111.623 213.557 106.844C213.557 103.09 214.24 99.8898 215.605 97.2445C217.056 94.5138 219.019 92.2952 221.493 90.5885C223.968 88.8818 226.827 87.6018 230.069 86.7485C233.397 85.8952 236.939 85.4685 240.693 85.4685C244.107 85.4685 247.349 85.7672 250.421 86.3645C253.493 86.9618 256.139 87.7298 258.357 88.6685V87.1325C258.357 82.8658 256.864 79.7938 253.877 77.9165C250.891 76.0392 246.581 75.1005 240.949 75.1005C237.28 75.1005 233.653 75.4845 230.069 76.2525C226.485 76.9352 222.773 78.1298 218.933 79.8365V65.1165C222.603 63.5805 226.571 62.3005 230.837 61.2765C235.104 60.2525 239.925 59.7405 245.301 59.7405C252.299 59.7405 258.187 60.8072 262.965 62.9405C267.829 64.9885 271.499 68.1032 273.973 72.2845C276.448 76.4658 277.685 81.6712 277.685 87.9005V128.604L258.229 120.668C255.669 123.314 252.768 125.404 249.525 126.94C246.283 128.391 242.4 129.117 237.877 129.117ZM244.789 116.061C247.52 116.061 249.995 115.591 252.213 114.652C254.517 113.714 256.565 112.348 258.357 110.556V99.0365C256.907 98.2685 255.157 97.6285 253.109 97.1165C251.147 96.5192 248.885 96.2205 246.325 96.2205C243.851 96.2205 241.589 96.6045 239.541 97.3725C237.493 98.1405 235.872 99.2925 234.677 100.828C233.483 102.279 232.885 104.071 232.885 106.204C232.885 108.253 233.44 110.044 234.549 111.58C235.659 113.031 237.109 114.14 238.901 114.908C240.779 115.676 242.741 116.061 244.789 116.061Z"/>
+    <path id="lg-l" d="M282.345 131.513V37.9445H302.057V131.513H282.345Z"/>
+    <path id="lg-u" d="M329.237 134.853C321.472 134.853 315.669 132.549 311.829 127.941C307.989 123.333 306.069 117.274 306.069 109.765V66.6285H325.781V103.621C325.781 106.778 326.293 109.381 327.317 111.429C328.427 113.477 329.835 115.013 331.541 116.037C333.333 116.975 335.296 117.445 337.429 117.445C339.563 117.445 341.525 116.975 343.317 116.037C345.195 115.013 346.731 113.477 347.925 111.429C349.205 109.381 349.845 106.778 349.845 103.621V66.6285H369.557V134.469C369.557 134.469 364.859 128.429 360.557 126.629C356.906 125.1 349.717 125.509 349.717 125.509C347.669 128.154 344.939 130.373 341.525 132.165C338.197 133.957 334.101 134.853 329.237 134.853Z"/>
+    <circle id="lg-dot" cx="340" cy="30" r="30"/>
+
+    <symbol id="logo" viewBox="0 0 370 135">
+      <use href="#lg-V"/><use href="#lg-e"/><use href="#lg-r"/><use href="#lg-a"/><use href="#lg-l"/><use href="#lg-u"/><use href="#lg-dot"/>
+    </symbol>
+    <symbol id="mascot" viewBox="-34.5 -40.5 180 180">
+      <use href="#lg-V"/><circle cx="41" cy="-2" r="30"/>
+    </symbol>
+
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5.5 8.5h13l-1 11.2a1.5 1.5 0 0 1-1.5 1.3H8a1.5 1.5 0 0 1-1.5-1.3l-1-11.2Z M9 8.5V7a3 3 0 0 1 6 0v1.5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.3s-7.8-4.6-7.8-10.4A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 7.8 2.5c0 5.8-7.8 10.4-7.8 10.4Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 4.5 4.5"/></g></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 6v12M6 12h12"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 12h12"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></g></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m8 10 4 4 4-4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5c.6 4.6 2.9 6.9 7.5 7.5-4.6.6-6.9 2.9-7.5 7.5-.6-4.6-2.9-6.9-7.5-7.5 4.6-.6 6.9-2.9 7.5-7.5Z"/></symbol>
+
+  </defs>
+</svg>
+
+<!-- ============ TINTA (transição entre telas) ============ -->
+<div class="ink" aria-hidden="true">
+  <div class="ink__shape">
+    <svg class="ink__svg" viewBox="0 0 1062 1000" preserveAspectRatio="xMidYMid slice"><path d="M20.002 787.914C41.7003 820.073 100.527 881.496 162.246 869.918C239.396 855.447 258.683 763.796 203.232 669.732C147.781 575.669 65.8095 404.425 162.246 361.011C258.683 317.597 292.436 397.189 294.847 553.962C297.258 710.734 444.324 739.677 463.611 640.789C482.898 541.902 249.039 414.072 323.778 283.831C398.516 153.589 675.772 218.71 656.484 464.722C637.197 710.734 579.335 925.392 745.688 922.98C912.042 920.568 928.918 797.562 875.878 686.615C822.838 575.669 731.223 500.9 890.343 430.955C1049.46 361.011 1080.81 262.124 996.424 194.591C912.042 127.058 733.634 346.54 656.484 225.945C579.335 105.351 400.927 35.4064 224.93 180.119"/></svg>
+  </div>
+</div>
+
+<!-- ============ CURSOR (etiqueta que acompanha o mouse) ============ -->
+<div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header is-solid" id="header">
+  <a class="header__logo" href="index.html" aria-label="Veralu — voltar ao início"><svg><use href="#logo"/></svg></a>
+  <nav class="header__nav" aria-label="Seções">
+    <a href="index.html#manifesto">Manifesto</a>
+    <a href="index.html#essencia">Essência</a>
+    <a href="index.html#loja" class="is-active">Loja</a>
+  </nav>
+  <div class="header__actions">
+    <button class="icon-btn" id="favBtn" type="button" aria-label="Ver favoritos">
+      <svg class="icon-heart"><use href="#i-heart"/></svg>
+      <span class="badge" data-count="0">0</span>
+    </button>
+    <button class="icon-btn" id="bagBtn" type="button" aria-label="Abrir sacola">
+      <svg><use href="#i-bag"/></svg>
+      <span class="badge" data-count="0">0</span>
+    </button>
+  </div>
+</header>
+
+<main class="pdp" id="top">
+  <div class="pdp__wrap">
+    <nav class="crumbs" aria-label="Você está em">
+      <a href="index.html">Início</a><span aria-hidden="true">/</span>
+      <a href="index.html#loja">Sketchbooks</a><span aria-hidden="true">/</span>
+      <b id="crumbName">Sketchbook</b>
+    </nav>
+
+    <div class="pdp__grid" id="pdp">
+      <div class="pdp__media">
+        <div class="gallery" id="gallery" aria-label="Fotos do sketchbook">
+          <figure class="shot shot--cover" data-cursor="folhear">
+            <div class="shot__stage">
+              <div class="book">
+                <div class="book__pages"></div>
+                <div class="book__cover"><img alt="" draggable="false"></div>
+              </div>
+              <div class="book__shadow"></div>
+            </div>
+            <figcaption>passe o mouse para folhear</figcaption>
+          </figure>
+          <figure class="shot shot--detail" data-cursor="zoom">
+            <img alt="" draggable="false" loading="lazy" decoding="async">
+            <figcaption>detalhe da arte</figcaption>
+          </figure>
+          <figure class="shot shot--side" data-cursor="girar">
+            <div class="block3d" aria-hidden="true"><div class="block3d__spin">
+              <div class="b3 b3--back"></div>
+              <div class="b3 b3--edge"></div>
+              <div class="b3 b3--top"></div>
+              <div class="b3 b3--spine"><svg><use href="#logo"/></svg></div>
+              <div class="b3 b3--front"><img alt="" draggable="false" loading="lazy" decoding="async"></div>
+            </div>
+            </div>
+            <figcaption>capa dura · lombada costurada</figcaption>
+          </figure>
+          <figure class="shot shot--open">
+            <div class="spread" aria-hidden="true">
+              <div class="spread__page spread__page--l"><img class="spread__sketch" alt="" draggable="false" loading="lazy" decoding="async"></div>
+              <div class="spread__page spread__page--r">
+                <div class="spread__note"><i></i><i></i><i></i><i></i><i></i></div>
+                <svg class="spread__mark"><use href="#logo"/></svg>
+              </div>
+              <div class="spread__turn"><b></b><b></b></div>
+            </div>
+            <figcaption id="paperCaption">miolo em Pólen 90g</figcaption>
+          </figure>
+        </div>
+        <div class="gallery__dots" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+      </div>
+
+      <aside class="buy" id="buy" aria-labelledby="pTitle">
+        <p class="buy__eyebrow">colab com <b id="pArtist">@artista</b></p>
+        <h1 class="buy__title" id="pTitle">Sketchbook</h1>
+        <p class="buy__desc" id="pDesc"></p>
+        <p class="buy__price"><b id="pPrice">R$ 0,00</b> <small id="pInstall"></small></p>
+
+        <fieldset class="pick">
+          <legend>Tamanho <b id="sizeVal">A5</b></legend>
+          <div class="sizes" id="sizes"></div>
+        </fieldset>
+        <fieldset class="pick">
+          <legend>Papel <b id="paperVal">Pólen 90g</b></legend>
+          <div class="swatches" id="papers"></div>
+          <p class="pick__about" id="paperAbout" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="buy__row">
+          <div class="qty" aria-label="Quantidade">
+            <button type="button" data-qty="-1" aria-label="Diminuir"><svg><use href="#i-minus"/></svg></button>
+            <span class="qty__n" id="qtyN">1</span>
+            <button type="button" data-qty="1" aria-label="Aumentar"><svg><use href="#i-plus"/></svg></button>
+          </div>
+          <button class="btn btn--ghost" type="button" id="addBag">Adicionar à sacola</button>
+          <button class="buy__fav" type="button" id="pFav" aria-pressed="false" aria-label="Favoritar"><svg><use href="#i-heart"/></svg></button>
+        </div>
+        <button class="btn btn--primary btn--full" type="button" id="buyNow">Comprar</button>
+
+        <ul class="perks">
+          <li><svg><use href="#i-star"/></svg>Frete grátis em pedidos acima de R$ 150</li>
+          <li><svg><use href="#i-star"/></svg>Capa dura, elástico e fita marcadora</li>
+          <li><svg><use href="#i-star"/></svg>Parte de cada venda vai para o artista</li>
+        </ul>
+
+        <div class="acc" id="acc">
+          <details open>
+            <summary>Detalhes <svg><use href="#i-plus"/></svg></summary>
+            <div class="acc__body"><div>
+              <ul>
+                <li>96 páginas (48 folhas) costuradas, que abrem 180° sem forçar a lombada</li>
+                <li>Capa dura com a arte impressa e acabamento fosco</li>
+                <li>Elástico para fechar e fita marcadora de cetim</li>
+                <li>Cantos arredondados e bolso interno na contracapa</li>
+              </ul>
+            </div></div>
+          </details>
+          <details>
+            <summary>Sobre o papel <svg><use href="#i-plus"/></svg></summary>
+            <div class="acc__body"><div id="accPaper"></div></div>
+          </details>
+          <details>
+            <summary>Sobre a colab <svg><use href="#i-plus"/></svg></summary>
+            <div class="acc__body"><div id="accArtist"></div></div>
+          </details>
+          <details>
+            <summary>Entrega e trocas <svg><use href="#i-plus"/></svg></summary>
+            <div class="acc__body"><div>
+              <p>Enviamos para todo o Brasil. O prazo e o valor do frete aparecem antes de você finalizar o pedido.</p>
+              <p>Se não amar, você tem 7 dias depois de receber para devolver, sem precisar explicar o porquê.</p>
+            </div></div>
+          </details>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="more" aria-labelledby="moreTitle">
+    <div class="more__head">
+      <h2 id="moreTitle">Você também pode gostar</h2>
+      <a class="more__all" href="index.html#loja">ver todos os sketchbooks <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <ul class="grid" id="moreGrid" role="list"></ul>
+  </section>
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer" data-header="dark">
+  <div class="footer__top">
+    <div class="footer__news">
+      <p class="eyebrow">cartas coloridas</p>
+      <h3>Receba cor na sua caixa de entrada.</h3>
+      <form class="news" id="news" novalidate>
+        <input type="email" name="email" placeholder="seu@email.com" aria-label="Seu e-mail" required>
+        <button class="btn btn--yellow" type="submit" data-cursor="✦">quero cor</button>
+      </form>
+      <small>Lançamentos, colabs e nada de spam cinza.</small>
+    </div>
+    <nav class="footer__cols" aria-label="Rodapé">
+      <div>
+        <h4>Loja</h4>
+        <a href="index.html#loja">Sketchbooks</a>
+        <a href="index.html#loja" data-fav-link>Favoritos</a>
+        <button type="button" data-open-bag>Sacola</button>
+      </div>
+      <div>
+        <h4>Veralu</h4>
+        <a href="index.html#manifesto">Manifesto</a>
+        <a href="index.html#essencia">Essência</a>
+        <button type="button" id="replayIntro">Rever abertura</button>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__brand" aria-hidden="true">
+    <svg class="footer__logo" viewBox="-6 -40 382 180" overflow="visible">
+      <g class="fl"><use href="#lg-V"/></g>
+      <g class="fl"><use href="#lg-e"/></g>
+      <g class="fl"><use href="#lg-r"/></g>
+      <g class="fl"><use href="#lg-a"/></g>
+      <g class="fl"><use href="#lg-l"/></g>
+      <g class="fl"><use href="#lg-u"/></g>
+      <g class="fl fl-dot"><use href="#lg-dot"/></g>
+    </svg>
+  </div>
+  <div class="footer__bottom">
+    <p>A arte está aqui para dar vida aos dias cinzas.</p>
+    <p>© 2026 Veralu · feito com cor no Brasil</p>
+  </div>
+</footer>
+<!-- ============ SACOLA ============ -->
+<div class="bag" id="bag" aria-hidden="true">
+  <div class="bag__backdrop" data-close></div>
+  <aside class="bag__panel" role="dialog" aria-modal="true" aria-labelledby="bagTitle" data-lenis-prevent>
+    <header class="bag__head">
+      <h3 id="bagTitle">Sua sacola</h3>
+      <button class="bag__close" type="button" aria-label="Fechar sacola" data-close><svg><use href="#i-close"/></svg></button>
+    </header>
+    <div class="bag__ship">
+      <p class="bag__ship-txt"></p>
+      <div class="bag__ship-bar"><i></i><svg class="bag__ship-dot"><use href="#mascot"/></svg></div>
+    </div>
+    <ul class="bag__items" role="list"></ul>
+    <div class="bag__empty">
+      <svg class="bag__empty-mascot"><use href="#mascot"/></svg>
+      <p>Sua sacola está vazia… por enquanto.</p>
+      <a class="btn btn--primary" href="index.html#loja" data-close>ver sketchbooks</a>
+    </div>
+    <footer class="bag__foot">
+      <div class="bag__sum"><span>Subtotal</span><b class="bag__total">R$ 0,00</b></div>
+      <button class="btn btn--primary btn--full bag__checkout" type="button">Finalizar pedido</button>
+      <small>Pix e cartão de crédito chegam na próxima fase ✦</small>
+    </footer>
+  </aside>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="fx-layer" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>if (!window.gsap || !window.ScrollTrigger || !window.Lenis) document.documentElement.className = 'no-js';</script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
